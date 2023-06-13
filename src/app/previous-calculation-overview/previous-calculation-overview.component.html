@@ -17,5 +17,10 @@
                 <td>{{enemy.totalVolume}}/km<sup>3</sup></td>
             </tr>
         </tbody>
+        <tbody *ngIf="enemyPlanetVolumeArr.length == 0">
+            <td colspan="6">
+                <span>No Data Available</span>
+            </td>
+        </tbody>
     </table>
 </div>
