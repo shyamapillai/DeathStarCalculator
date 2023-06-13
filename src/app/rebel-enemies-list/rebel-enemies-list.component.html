@@ -1,0 +1,13 @@
+<mat-form-field>
+    <input type="text" matInput placeholder="Enter your enemy's name" [(ngModel)]="enemyName" (input)="searchEnemies()"
+        style="height: 60px; border: 1px solid #ccc;
+        padding: 2px;
+        border-radius: 5px;">
+    <mat-hint *ngIf="enemiesSuggestions.length === 0">No Match Found</mat-hint>
+    <!-- <mat-autocomplete> -->
+    <mat-option *ngFor="let suggestion of enemiesSuggestions" [value]="suggestion.name"
+        (click)="addToEnemiesList(suggestion)">
+        {{ suggestion.name }}
+    </mat-option>
+    <!-- </mat-autocomplete> -->
+</mat-form-field>

@@ -1,0 +1,21 @@
+<div style="margin-top: 5%; margin-bottom: 2%;">
+    <button class="btn btn-primary" (click)="goToNewCalculation()">+ Neue Berechnung</button>
+</div>
+<h1>Bisherige Berechnungen</h1>
+
+<div class="container calculatedvoldiv">
+    <table class="table cal-vol-div-table table-striped" style="width: 50%;">
+        <thead>
+            <tr>
+                <th>Personen</th>
+                <th>Volume der Planeten</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let enemy of enemyPlanetVolumeArr">
+            <tr>
+                <td>{{enemy.enemyList}}</td>
+                <td>{{enemy.totalVolume}}/km<sup>3</sup></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

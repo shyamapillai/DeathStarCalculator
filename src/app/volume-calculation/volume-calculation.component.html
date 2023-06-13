@@ -1,0 +1,23 @@
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <h2>Suche in Personen-Datenbank</h2>
+    <app-rebel-enemies-list (arrayEmitter)="receiveArray($event)"></app-rebel-enemies-list>
+    <div class="volume-calc-list-div" *ngIf="selectedEnemies.length > 0">
+        <mat-list class="no-bullets" style="display: block; align-items: center;">
+            <mat-list-item *ngFor="let enemy of selectedEnemies" style="display: block; align-items: center;">
+                {{enemy.name}}</mat-list-item>
+        </mat-list>
+    </div>
+    <div class="vol-cal-main-div">
+        <div class="vol-cal-btn-div">
+            <button mat-raised-button [disabled]="selectedEnemies.length === 0" (click)="calculateVolume()"
+                color="accent" class="btn btn-primary">Volumen Berechnen</button>
+        </div>
+        <div *ngIf="totalVolume != 0" style="text-align: center;width: 100%;height: 60px;margin: 10px;padding: 10px;">
+            Das Volumen der Planetenbet beträgt : {{totalVolume}} /
+            km<sup>3</sup></div>
+        <div class="vol-cal-btn-div">
+            <button mat-button [disabled]="selectedEnemies.length === 0" (click)="backToHome()"
+                class="btn btn-primary">Berechnung übernehmen</button>
+        </div>
+    </div>
+</div>

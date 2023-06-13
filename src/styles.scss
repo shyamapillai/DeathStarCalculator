@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    text-align: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.calculatedvoldiv {
+    margin-left: 30%;
+    width: 70% !important;
+}
+
+.volume-calc-list-div {
+    border: 1px solid #ccc;
+    width: 40%;
+    margin: 15px;
+}
+
+.cal-vol-div-table tr,
+.cal-vol-div-table th,
+.cal-vol-div-table td {
+    border: 1px solid #ccc;
+
+}
+
+.vol-cal-btn-div {
+    margin: 35px;
+}
+
+.vol-cal-main-div {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
